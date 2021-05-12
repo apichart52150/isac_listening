@@ -11,8 +11,6 @@
 |
 */
 Route::get('access/{token}/{id}', 'Auth\AccessController@store');
-
-
 Route::get('/', function() {
     if(Auth::guard('ipack')->check()) {
         return redirect('welcome');
@@ -21,8 +19,12 @@ Route::get('/', function() {
     }
 });
 
-Route::get('notfound', 'HomeController@not')->name('notfound');
-
-Route::middleware(['middleware' => 'auth:ipack'])->group(function () {
-    Route::get('welcome', 'HomeController@index')->name('welcome');
+Route::middleware(['auth:ipack'])->group(function () {
+    Route::get('welcome', 'HomeController@*****')->name('welcome');
 });
+
+Route::get('home', 'HomeController@index')->name('home');
+
+
+
+Route::get('notfound', 'HomeController@not')->name('notfound');

@@ -9,9 +9,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-        dd(auth('ipack')->user()->std_id);
-        return view('welcome');
+        return view('home');
     }
+
+
+
 
     public function not()
     {

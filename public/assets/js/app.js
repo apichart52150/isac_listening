@@ -135,6 +135,11 @@ File: Main Js File
         });
     },
 
+    Components.prototype.initTippyTooltips = function () {
+        if($('[data-plugin="tippy"]').length > 0)
+        tippy('[data-plugin="tippy"]');
+    },
+
     //initilizing
     Components.prototype.init = function () {
         var $this = this;
@@ -147,6 +152,7 @@ File: Main Js File
         this.initCounterUp(),
         this.initPeityCharts(),
         this.initKnob();
+        this.initTippyTooltips();
     },
 
     $.Components = new Components, $.Components.Constructor = Components
@@ -242,9 +248,6 @@ function ($) {
             $this._resetSidebarScroll();
         });
 
-        // sidebar - main menu
-        $("#side-menu").metisMenu();
-
         // sidebar - scroll container
         $this._resetSidebarScroll();
 
@@ -269,16 +272,16 @@ function ($) {
         });
 
         // activate the menu in left side bar based on url
-        $("#side-menu a").each(function () {
+        $(".navigation-menu a").each(function () {
             var pageUrl = window.location.href.split(/[?#]/)[0];
-            if (this.href == pageUrl) {
+            if (this.href == pageUrl) {  
                 $(this).addClass("active");
-                $(this).parent().addClass("mm-active"); // add active to li of the current link
-                $(this).parent().parent().addClass("mm-show");
+                $(this).parent().addClass("active"); // add active to li of the current link
+                $(this).parent().parent().addClass("in");
                 $(this).parent().parent().prev().addClass("active"); // add active class to an anchor
-                $(this).parent().parent().parent().addClass("mm-active");
-                $(this).parent().parent().parent().parent().addClass("mm-show"); // add active to li of the current link
-                $(this).parent().parent().parent().parent().parent().addClass("mm-active");
+                $(this).parent().parent().parent().addClass("active");
+                $(this).parent().parent().parent().parent().addClass("in"); // add active to li of the current link
+                $(this).parent().parent().parent().parent().parent().addClass("active");
             }
         });
 
@@ -288,6 +291,16 @@ function ($) {
             $('#navigation').slideToggle(400);
         });
 
+        $('.navigation-menu>li').slice(-2).addClass('last-elements');
+
+        $('.navigation-menu li.has-submenu a[href="#"]').on('click', function (e) {
+            if ($(window).width() < 992) {
+                e.preventDefault();
+                $(this).parent('li').toggleClass('open').find('.submenu:first').toggleClass('open');
+            }
+        });
+
+
         // Preloader
         $(window).on('load', function () {
             $('#status').fadeOut();
@@ -295,31 +308,15 @@ function ($) {
         });
     },
 
-    /** 
-     * Init the layout - with broad sidebar or compact side bar
-    */
-    App.prototype.initLayout = function () {
-        // in case of small size, add class enlarge to have minimal menu
-        if (this.$window.width() >= 768 && this.$window.width() <= 1028) {
-            this.$body.addClass('enlarged');
-        } else {
-            if (this.$body.data('keep-enlarged') != true) {
-                this.$body.removeClass('enlarged');
-            }
-        }
-    },
-
     //initilizing
     App.prototype.init = function () {
         var $this = this;
-        this.initLayout();
         $.Portlet.init();
         this.initMenu();
         $.Components.init();
         // on window resize, make menu flipped automatically
         $this.$window.on('resize', function (e) {
             e.preventDefault();
-            $this.initLayout();
             $this._resetSidebarScroll();
         });
     },
