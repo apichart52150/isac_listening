@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Minton - Responsive Admin Dashboard Template</title>
+        <title>iSAC - Listening</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('public/assets/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('public/assets/images/club4.png') }}">
 
         <!-- Lightbox css -->
         <link href="{{ asset('public/assets/libs/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css" />
@@ -94,7 +94,7 @@
 
                     <!-- LOGO -->
                     <div class="logo-box">
-                        <a href="index.html" class="logo text-center">
+                        <a href="#" class="logo text-center">
                             <span class="logo-lg">
                                 <img src="{{ asset('public/assets/images/logo-light.png') }}" alt="" height="20">
                                 <!-- <span class="logo-lg-text-light">Xeria</span> -->

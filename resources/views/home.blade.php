@@ -47,14 +47,14 @@
     <div class="col-sm-6 col-xl-3 filter-item all web illustrator">
         <div class="gal-box">
             <a href="#" class="btn btn-info waves-effect waves-light w-100 p-3">
-                <img class="img-fluid" src="{{ asset('public/assets/images/club4.png') }}">
+                <img class="img-fluid" src="{{ asset('public/assets/images/sac-01.png') }}">
             </a>
             <div class="gall-info"  id="headingOne">
                 <h4 class="font-16 mt-0 text-info">Challenge Practice</h4>
 
                 <div class="accordion" id="accordionExample1">
                     <a class="collapsed gal-like-btn" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        <i class="ti-angle-down text-muted"></i>
+                        <i class="ti-angle-down text-info"></i>
                         
                     </a>
                     <img src="{{ asset('public/assets/images/file-icons/pdf.svg') }}" alt="user-img" class="rounded-circle" height="24" />
@@ -89,14 +89,14 @@
 
     <div class="col-sm-6 col-xl-3 filter-item all web illustrator">
         <div class="gal-box">
-            <a href="#" class="btn btn-purple waves-effect waves-light w-100 p-3">
-                <img src="{{ asset('public/assets/images/club4.png') }}" class="img-fluid" alt="work-thumbnail">
+            <a href="#" class="btn btn-warning waves-effect waves-light w-100 p-3">
+                <img src="{{ asset('public/assets/images/sac-02.png') }}" class="img-fluid" alt="work-thumbnail">
             </a>
             <div class="gall-info">
-                <h4 class="font-16 mt-0 text-purple">NC Listening Test</h4>
+                <h4 class="font-16 mt-0 text-warning">NC Listening Test</h4>
                 <div class="accordion" id="accordionExample2">
                     <a class="collapsed gal-like-btn" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="ti-angle-down text-muted"></i>
+                        <i class="ti-angle-down text-warning"></i>
                         
                     </a>
                     <img src="{{ asset('public/assets/images/file-icons/pdf.svg') }}" alt="user-img" class="rounded-circle" height="24" />
@@ -137,14 +137,14 @@
 
     <div class="col-sm-6 col-xl-3 filter-item all web illustrator">
         <div class="gal-box">
-            <a href="#" class="btn btn-success waves-effect waves-light w-100 p-3">
-                <img src="{{ asset('public/assets/images/club4.png') }}" class="img-fluid" alt="work-thumbnail">
+            <a href="#" class="btn btn-danger waves-effect waves-light w-100 p-3">
+                <img src="{{ asset('public/assets/images/sac-03.png') }}" class="img-fluid" alt="work-thumbnail">
             </a>
             <div class="gall-info">
-                <h4 class="font-16 mt-0 text-success">Active Listening</h4>
+                <h4 class="font-16 mt-0 text-danger">Active Listening</h4>
                 <div class="accordion" id="accordionExample3">
                     <a class="collapsed gal-like-btn" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="ti-angle-down text-muted"></i>
+                        <i class="ti-angle-down text-danger"></i>
                         
                     </a>
                     <img src="{{ asset('public/assets/images/file-icons/pdf.svg') }}" alt="user-img" class="rounded-circle" height="24" />
@@ -222,13 +222,13 @@
     <div class="col-sm-6 col-xl-3 filter-item all web illustrator">
         <div class="gal-box">
             <a href="#" class="btn btn-pink waves-effect waves-light w-100 p-3">
-                <img src="{{ asset('public/assets/images/club4.png') }}" class="img-fluid" alt="work-thumbnail">
+                <img src="{{ asset('public/assets/images/sac-04.png') }}" class="img-fluid" alt="work-thumbnail">
             </a>
             <div class="gall-info">
                 <h4 class="font-16 mt-0 text-pink">Language Drills Practice</h4>
                 <div class="accordion" id="accordionExample4">
                     <a class="collapsed gal-like-btn" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        <i class="ti-angle-down text-muted"></i>
+                        <i class="ti-angle-down text-pink"></i>
                         
                     </a>
                     <img src="{{ asset('public/assets/images/file-icons/pdf.svg') }}" alt="user-img" class="rounded-circle" height="24" />
