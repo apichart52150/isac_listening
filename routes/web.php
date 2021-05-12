@@ -18,4 +18,10 @@ Route::middleware(['middleware' => 'auth:ipack'])->group(function () {
     Route::get('/', function () {
         return view('welcome');
     })->name('welcome');
+
+   
 });
+
+Route::get('/login', function (){
+    return view('welcome');
+})->name('login');
