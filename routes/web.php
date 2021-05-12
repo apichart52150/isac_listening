@@ -21,6 +21,8 @@ Route::get('/', function() {
     }
 });
 
+Route::get('notfound', 'HomeController@not')->name('notfound');
+
 Route::middleware(['middleware' => 'auth:ipack'])->group(function () {
     Route::get('welcome', 'HomeController@index')->name('welcome');
 });
